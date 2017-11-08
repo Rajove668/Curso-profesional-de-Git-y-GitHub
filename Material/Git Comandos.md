@@ -12,21 +12,38 @@
 - git commit -m "mensaje"
   - ; Pasa los archivos en staging area a el repositorio.
   - ; "mensaje" es el titulo del commit.
--git commit --amend
-  - ; Modificar el ultimo commit realizado, nombre, archivos
+- git commit --amend
+  - ; Modificar el ultimo commit realizado, nombre, archivos (Hacer antes git add .)
+- git tag -a [vesion (0.5)] -m "Version de prueba"
+  - Realizar etiquetado del proyecto
+- git tag [-l|-f|-d]
+  - para listar etiquetas
+  - para renombrar [vesion (0.5)]
+  - para eliminar -a [vesion (0.5)] -m "Version de prueba"
+  - Si no se coloca el Sha de algun commit se coloca el del ultimo commit  
+- git log
+- git log -[numero]
+- git log stat
+- git log --graph
+- git log --oneline --decorate --graph
+- > git superlog log.txt // respaldo del log antes de un reset --hard
+- git superlog [git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)-     %an%C(reset)%C(bold yellow)%d%C(reset)' --all"]
+  - ---- Muestra el historial de commit
+- git diff sha vs sha !! git diff sha
+  - Muestra la diferencia entre dos commit
+  - funciona con tag y branch
+- git reset --soft --mixed --hard
+  - ; devuelve al commit Sha especificado con las modificaciones en staging area y borra los que estan entre el actual y el sha.
+  - ; diferencia los quita tambien del stage
+  - ; elimina hasta el commit especificado hasta del working directory, los archivos que nunca se han agregado a staging area no son eliminados "para recuperar git reset --hard [sha ultimo commit del respaldo]"
+
 - git clone
 - git checkout [branch]
-
-
-
 - git pull origin master ; actualizar el branch con el del repositorio
   - fetch
   - merge
 - git push ; sube al branch
-- git reset --HARD pasa a local todo
-- git log
-- git log --graph
-- git log --oneline --decorate --graph
+
 - git remote prune origin
 - git branch [branch]
 - git push --set-upstream origin [branch]

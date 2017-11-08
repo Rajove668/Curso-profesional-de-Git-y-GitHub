@@ -39,6 +39,7 @@
 - git branch [branch]
 - git branch -l // Listar Ramas
 - git branch -d|-D // Eliminar Ramas, D lo fuerza cuando se han hecho cambios o commit en la rama y no han sido mezclados
+- git branch-dr elimina en local y github
 - git branch -m (branch)(branch nuevo)
 - git checkout [branch] //Moverse entre Ramas
 
@@ -51,4 +52,3 @@
 
 - git remote prune origin
 - git push --set-upstream origin [branch]
-- git branch -d [branch] ;-d elimina , -D fuerza, -dr elimina en local y github

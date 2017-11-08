@@ -36,15 +36,19 @@
   - ; devuelve al commit Sha especificado con las modificaciones en staging area y borra los que estan entre el actual y el sha.
   - ; diferencia los quita tambien del stage
   - ; elimina hasta el commit especificado hasta del working directory, los archivos que nunca se han agregado a staging area no son eliminados "para recuperar git reset --hard [sha ultimo commit del respaldo]"
+- git branch [branch]
+- git branch -l // Listar Ramas
+- git branch -d|-D // Eliminar Ramas, D lo fuerza cuando se han hecho cambios o commit en la rama y no han sido mezclados
+- git branch -m (branch)(branch nuevo)
+- git checkout [branch] //Moverse entre Ramas
 
 - git clone
-- git checkout [branch]
+
 - git pull origin master ; actualizar el branch con el del repositorio
   - fetch
   - merge
 - git push ; sube al branch
 
 - git remote prune origin
-- git branch [branch]
 - git push --set-upstream origin [branch]
 - git branch -d [branch] ;-d elimina , -D fuerza, -dr elimina en local y github

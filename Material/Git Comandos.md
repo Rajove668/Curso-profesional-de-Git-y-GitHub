@@ -53,6 +53,7 @@
 - git stash list //nos muestra la lista de stash que tengamos.
 - git stash drop stash@{numero} //nos permite borrar un stash.
 - git stash apply <stash@{numero}> // aplicamos el último cambio o haciendo referencia a un stash
+- git cherrypick
 
 - git clone
 

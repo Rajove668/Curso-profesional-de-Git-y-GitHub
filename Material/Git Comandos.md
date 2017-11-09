@@ -62,11 +62,10 @@
 - git remote -v //Funciona para comprobar que el repositorio remoto fue añadido correctamente.
 - git remote remove origin //quitar el repositorio remoto
 - git fetch origin master // descarga los cambios a una rama llamada origin/master
-- git merge origin/master
-- git pull origin master ;  Combina  fetch y merge
-
-
-- git push ; sube al branch
+- git merge origin/master //Para errores se agrega --allow-unrelated-histories
+- git pull // Solo trae el master
+- git pull origin nombre-rama - git pull origin master ;  Combina  fetch y merge
+- git push // Sube al repositorio se puede solo subir una rama añadiendo [branch]
 
 - git remote prune origin
 - git push --set-upstream origin [branch]

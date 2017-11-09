@@ -57,7 +57,10 @@
 
 # *GitHub Comandos*
 - git clone [https/ssh]
-
+- Fork de repositorios de otras personas
+- git remote add origin [https/ssh] // funciona para añadir un repositorio remoto a nuestro repositorio local.
+- git remote -v //Funciona para comprobar que el repositorio remoto fue añadido correctamente.
+- git remote remove origin //quitar el repositorio remoto
 
 - git pull origin master ; actualizar el branch con el del repositorio
   - fetch

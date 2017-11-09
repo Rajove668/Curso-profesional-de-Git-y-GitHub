@@ -42,11 +42,16 @@
 - git branch-dr elimina en local y github
 - git branch -m (branch)(branch nuevo)
 - git checkout [branch] //Moverse entre Ramas
+- git checkout [commit] //Moverse a un commit del pasado tener cuidado guardar todo antes de esto
+  git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
 - git merge [branch] // mezclar cambio de una rama con la que estamos actualmente
   - fast-forward: los mezcla automáticamente
   - recursive/auto-merging: ambas ramas salieron al mismo tiempo y hay algo nuevo en la rama que la otra no recuerda, por eso hace la mezcla recursiva.
   - manual merge: nos va a tocar decirle a git específicamente los cambios que queremos mezclar
-
+- git stash //es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+- git stash list //nos muestra la lista de stash que tengamos.
+- git stash drop stash@{numero} //nos permite borrar un stash.
+- git stash apply <stash@{numero}> // aplicamos el último cambio o haciendo referencia a un stash
 
 - git clone
 

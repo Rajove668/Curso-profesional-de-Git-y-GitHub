@@ -68,6 +68,3 @@
 - git push // Sube al repositorio se puede solo subir una rama añadiendo [branch]
 - git push origin [branch]
 - git push origin [branch] --tags // para agregar los tags
-
-- git remote prune origin
-- git push --set-upstream origin [branch]

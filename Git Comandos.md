@@ -1,0 +1,70 @@
+# *Git Comandos*
+- git init [Nombre de la carpeta] !! git init
+  - ; Crea un repositorio dentro de la carpeta dada.
+  - ; Crea un repositorio en la ubicacion donde se este.
+- git status
+  - ; muestra los archivos modificados que no se han subido a staging area.
+- git add (-A|.|-A -n|<file>)
+  - ; pasa todos los archivos modificados a staging area . == -a.
+  - ; muestra los archivos que van hacer agregados a staging area -n.
+- git rm --cached <file>
+  - ; Saca algun archivo de staging area.
+- git commit -m "mensaje"
+  - ; Pasa los archivos en staging area a el repositorio.
+  - ; "mensaje" es el titulo del commit.
+- git commit --amend
+  - ; Modificar el ultimo commit realizado, nombre, archivos (Hacer antes git add .)
+- git tag -a [vesion (0.5)] -m "Version de prueba"
+  - Realizar etiquetado del proyecto
+- git tag [-l|-f|-d]
+  - para listar etiquetas
+  - para renombrar [vesion (0.5)]
+  - para eliminar -a [vesion (0.5)] -m "Version de prueba"
+  - Si no se coloca el Sha de algun commit se coloca el del ultimo commit  
+- git log
+- git log -[numero]
+- git log stat
+- git log --graph
+- git log --oneline --decorate --graph
+- > git superlog log.txt // respaldo del log antes de un reset --hard
+- git superlog [git config --global alias.superlog "log --graph --abbrev-commit --decorate --date=relative  --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)-     %an%C(reset)%C(bold yellow)%d%C(reset)' --all"]
+  - ---- Muestra el historial de commit
+- git diff sha vs sha !! git diff sha
+  - Muestra la diferencia entre dos commit
+  - funciona con tag y branch
+- git reset --soft --mixed --hard
+  - ; devuelve al commit Sha especificado con las modificaciones en staging area y borra los que estan entre el actual y el sha.
+  - ; diferencia los quita tambien del stage
+  - ; elimina hasta el commit especificado hasta del working directory, los archivos que nunca se han agregado a staging area no son eliminados "para recuperar git reset --hard [sha ultimo commit del respaldo]"
+- git branch [branch]
+- git branch -l // Listar Ramas
+- git branch -d|-D // Eliminar Ramas, D lo fuerza cuando se han hecho cambios o commit en la rama y no han sido mezclados
+- git branch-dr //elimina en local y github
+- git branch -m (branch)(branch nuevo) //Cambiar nombre
+- git checkout [branch] //Moverse entre Ramas
+- git checkout [commit] //Moverse a un commit del pasado tener cuidado guardar todo antes de esto
+  git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
+- git checkout -- <file> // quitarle los cambios a un archivo
+- git merge [branch] // mezclar cambio de una rama con la que estamos actualmente
+  - fast-forward: los mezcla automáticamente
+  - recursive/auto-merging: ambas ramas salieron al mismo tiempo y hay algo nuevo en la rama que la otra no recuerda, por eso hace la mezcla recursiva.
+  - manual merge: nos va a tocar decirle a git específicamente los cambios que queremos mezclar
+- git stash //es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+- git stash list //nos muestra la lista de stash que tengamos.
+- git stash drop stash@{numero} //nos permite borrar un stash.
+- git stash apply <stash@{numero}> // aplicamos el último cambio o haciendo referencia a un stash
+- git cherry-pick [SHA-1] //Nos permite cambiar un commit a otra rama
+
+# *GitHub Comandos*
+- git clone [https/ssh]
+- Fork de repositorios de otras personas
+- git remote add origin [https/ssh] // funciona para añadir un repositorio remoto a nuestro repositorio local.
+- git remote -v //Funciona para comprobar que el repositorio remoto fue añadido correctamente.
+- git remote remove origin //quitar el repositorio remoto
+- git fetch origin master // descarga los cambios a una rama llamada origin/master
+- git merge origin/master //Para errores se agrega --allow-unrelated-histories
+- git pull // Solo trae el master
+- git pull origin nombre-rama - git pull origin master ;  Combina  fetch y merge
+- git push // Sube al repositorio se puede solo subir una rama añadiendo [branch]
+- git push origin [branch]
+- git push origin [branch] --tags // para agregar los tags

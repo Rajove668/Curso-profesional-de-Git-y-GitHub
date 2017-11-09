@@ -61,10 +61,11 @@
 - git remote add origin [https/ssh] // funciona para añadir un repositorio remoto a nuestro repositorio local.
 - git remote -v //Funciona para comprobar que el repositorio remoto fue añadido correctamente.
 - git remote remove origin //quitar el repositorio remoto
+- git fetch origin master // descarga los cambios a una rama llamada origin/master
+- git merge origin/master
+- git pull origin master ;  Combina  fetch y merge
 
-- git pull origin master ; actualizar el branch con el del repositorio
-  - fetch
-  - merge
+
 - git push ; sube al branch
 
 - git remote prune origin

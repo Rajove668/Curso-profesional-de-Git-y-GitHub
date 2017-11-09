@@ -39,8 +39,8 @@
 - git branch [branch]
 - git branch -l // Listar Ramas
 - git branch -d|-D // Eliminar Ramas, D lo fuerza cuando se han hecho cambios o commit en la rama y no han sido mezclados
-- git branch-dr elimina en local y github
-- git branch -m (branch)(branch nuevo)
+- git branch-dr //elimina en local y github
+- git branch -m (branch)(branch nuevo) //Cambiar nombre
 - git checkout [branch] //Moverse entre Ramas
 - git checkout [commit] //Moverse a un commit del pasado tener cuidado guardar todo antes de esto
   git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
@@ -54,9 +54,10 @@
 - git stash drop stash@{numero} //nos permite borrar un stash.
 - git stash apply <stash@{numero}> // aplicamos el último cambio o haciendo referencia a un stash
 - git cherry-pick [SHA-1] //Nos permite cambiar un commit a otra rama
-- Desafio
 
-- git clone
+# *GitHub Comandos*
+- git clone [https/ssh]
+
 
 - git pull origin master ; actualizar el branch con el del repositorio
   - fetch

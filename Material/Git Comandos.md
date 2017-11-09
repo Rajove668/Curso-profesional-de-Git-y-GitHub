@@ -44,6 +44,10 @@
 - git checkout [branch] //Moverse entre Ramas
 - git checkout [commit] //Moverse a un commit del pasado tener cuidado guardar todo antes de esto
   git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
+- git stash //es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+- git stash list //nos muestra la lista de stash que tengamos.
+- git stash drop stash@{numero} //nos permite borrar un stash.
+- git stash apply <stash@{numero}> // aplicamos el último cambio o haciendo referencia a un stash
 
 - git clone
 

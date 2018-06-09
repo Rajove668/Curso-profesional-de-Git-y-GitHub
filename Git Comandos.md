@@ -32,6 +32,8 @@
 - git diff sha vs sha !! git diff sha
   - Muestra la diferencia entre dos commit
   - funciona con tag y branch
+- git reset --hard HEAD~#
+  - ; elimina el commit especificado en el #
 - git reset --soft --mixed --hard
   - ; devuelve al commit Sha especificado con las modificaciones en staging area y borra los que estan entre el actual y el sha.
   - ; diferencia los quita tambien del stage

@@ -45,7 +45,7 @@
 - git branch -m (branch)(branch nuevo) //Cambiar nombre
 - git checkout [branch] //Moverse entre Ramas
 - git checkout [commit] //Moverse a un commit del pasado tener cuidado guardar todo antes de esto
-  git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
+- git checkout -b [nuevo branch]//nos permite crear una nueva rama desde cualquier punto y te pasa a ella
 - git checkout -- <file> // quitarle los cambios a un archivo
 - git merge [branch] // mezclar cambio de una rama con la que estamos actualmente
   - fast-forward: los mezcla automáticamente
